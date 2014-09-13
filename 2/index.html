@@ -1,0 +1,40 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <p>paragraph only test line</p>
+  <h1>Vertical Rhythm</h1>
+  <h2>2 - See what's going on</h2>
+  <p>next up we add some lines to our page to see how elements should be lined up<p>
+  <p>These lines are 18px (our line height) apart and are for illustrative purposes only. It means we can quickly see if the elements of the page are keeping in rhythm</p>
+  <a href="style.scss"><small>style.scss</small></a>
+  <pre>
+    body{
+      background-image: url(data:image/gif;base64,R0lGODlhBQASAIAAAN3d3f///yH5BAAAAAAALAAAAAAFABIAAAIKjI+py+0PF5izAAA7);
+    }
+  </pre>
+
+  <p>Straight away we can see that although our lines of text are 18px apart they don't align with our guide lines at all.</p>
+  <p>
+    The first line of this page is a P tag with our new line-height and font-size. The reason it is not aligning is the default browser style applies
+    <br>
+    margins to all block-level elements.
+  </p>
+  <p>
+    For Chrome, the margin above and below the P tag is set to 1em. This is our font-size value (12px).
+    <br>
+    for each line of text to line up with our guide lines we would want those margins to be equal to our line-height (18px or 1.5em).
+  <p>
+
+  <h3>the basic unit</h3>
+  <p>our line-height of 18px is in-fact our basic unit of rhythm<p>
+  <p>Vertical Rhythm provides us with a function to easily insert it into our css<p>
+  <pre>
+    rhythm(1)
+  </pre>
+  <p>which compiles to 1.5em</p>
+
+  <a href="../3/index.html">Next: 3 - Add rhythms to margins </a>
+</body>
+</html>

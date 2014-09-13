@@ -1,1 +1,37 @@
-hello world
+<html>
+<head>
+
+</head>
+<body>
+  <h1>Vertical Rhythm</h1>
+  <h2>A step by step explanation of our use of Vertical Rhythm</h2>
+  <p>This guide will build up over a number of pages introducing new concepts that are each applied to the currently viewed page.<P>
+  <p>We begin with this page, it has no css styling and shows how your browser renders a simple text only page.</p>
+  <p>You can download the <a href="https://github.com/RShergold/vertical-rhythm">GitHub repository</a> here</p>
+  <h3>Setting up our environment</h3>
+  <p>
+    We will be using the <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Vertical Rhythm tools in Compass</a>.
+    To use this we will need <a href="http://sass-lang.com/">SASS</a>.
+  </p>
+  <p>
+    Your setup may be different but i'm using a Rake file to start sass watching for changes in the repo and compiling .scss files to .css
+    <br>
+    My rake file looks like this.
+  </p>
+  <a href="Rakefile"><small>Rakefile</small></a>
+  <pre>
+    desc 'Watch SCSS'
+    task :watch_scss do
+        current_location = File.dirname(__FILE__)
+        sh "compass watch --sass-dir #{current_location} --css-dir #{current_location} -I #{current_location} -e production"
+    end
+  </pre>
+  <p>
+    In the terminal I can now navigate to the repository root file and run <b>rake watch_scss</b>.
+    <br>
+    Any time I create/change a .scss file SASS will now compile the sass into a css file of the same name in the same directory.
+  </p>
+
+  <a href="1/index.html">Next: 1 - Setting up Vertical Rhythm </a>
+</body>
+</html>

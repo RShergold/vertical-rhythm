@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Vertical Rhythm</h1>
+  <h2>1 - Setting up Vertical Rhythm</h2>
+  <p>the first thing we do is import vertical rhythm from compass<p>
+  <p>
+    As most browsers default to a font-size of 16px we are going to change ours to something noticeably different.
+    <br>
+    We are going with a font-size of 12px and line-height of 18px.
+    <br>
+    finally, to actually apply these values we call the establish-baseline mixin
+  <p>
+  <a href="style.scss"><small>style.scss</small></a>
+  <pre>
+    @import "compass/typography/vertical_rhythm";
+
+    $base-font-size: 12px;
+    $base-line-height: 18px;
+
+    @include establish-baseline;
+  </pre>
+
+  <h3>Compiled scss</h3>
+  <p>Our style.scss file compiles into the following</p>
+  <a href="style.css"><small>style.css</small></a>
+  <pre>
+    * html {
+      font-size: 75%;
+    }
+
+    html {
+      font-size: 12px;
+      line-height: 1.5em;
+    }
+  </pre>
+  <p>
+    The first 3 lines are aimed at Internet Explorer 6 and older.
+    <br>
+    Here we set the base font size as a percentage of the default (16px).
+    <br>
+    75% of 16 = 12
+  <p>
+  <p>Our next line sets the base font size in pixels to our chosen size. (12px)<p>
+  <p>
+    Finally the base line height is set.
+    <br>
+    This is done in em's which is relative to the font size.
+    <br>
+    1em is now 12px (our font size) so to set our line height to 18px we set line height to 1.5em
+    <br>
+    12 * 1.5 = 18
+  <p>
+
+  <a href="../2/index.html">Next: 2 - See what's going on </a>
+</body>
+</html>

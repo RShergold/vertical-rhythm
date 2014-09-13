@@ -1,0 +1,68 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Vertical Rhythm</h1>
+  <h2>3 - Add rhythms to margins</h2>
+
+  <p>the first thing we are going to do is remove all of the default margins and padding from all block level elements we are going to use</p>
+  <a href="style.scss"><small>style.scss</small></a>
+  <pre>
+    body, div, h1, h2, h3, p, pre {
+      margin: 0;
+      padding: 0;
+    }
+  </pre>
+
+  <h3>adding the rhythm</h3>
+  <p>Then we add rhythm to each block element</p>
+  <a href="style.scss"><small>style.scss</small></a>
+  <pre>
+    body {
+      margin: rhythm(1);
+    }
+
+    p {
+      margin-bottom: rhythm(1);
+    }
+  </pre>
+  <p>which compiles to</p>
+  <a href="style.css"><small>style.css</small></a>
+  <pre>
+    body {
+      margin: 1.5em;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+    }
+  </pre>
+
+  <h3>Nicely aligned</h3>
+  <p>
+    every line now fits within the bounds of our 18px guide lines. The only elements that have a margin are BODY and P.
+    <br>
+    Those margins take up exactly one line.
+  <p>
+  <p>
+    However, our headers seem a bit wrong. They need some spacing... What's going on there?
+  </p>
+  <p>
+    The headers have the line height set in
+  </p>
+  <pre>
+    html {
+      line-height: 1.5em
+    }
+  </pre>
+  <p>
+    as this line-height is calculated in relation to the font-size of HTML it results in a line-height of 18px.
+    <br>
+    that's exactly what we need to fit it nicely in our guide lines but is not the correct line height for the headers as
+    <br>
+    they are a larger font size.
+  </p>
+  <a href="../4/index.html">Next: 4 - Setting font sizes </a>
+</body>
+</html>

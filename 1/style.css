@@ -1,0 +1,10 @@
+/* line 61, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 75%;
+}
+
+/* line 64, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 12px;
+  line-height: 1.5em;
+}

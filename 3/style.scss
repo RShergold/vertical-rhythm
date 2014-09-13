@@ -1,0 +1,23 @@
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 12px;
+$base-line-height: 18px;
+
+@include establish-baseline;
+
+body{
+  background-image: url(data:image/gif;base64,R0lGODlhBQASAIAAAN3d3f///yH5BAAAAAAALAAAAAAFABIAAAIKjI+py+0PF5izAAA7);
+}
+
+body,div,h1,h2,h3,h4,h5,p,pre {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: rhythm(1);
+}
+
+p {
+  margin-bottom: rhythm(1);
+}
