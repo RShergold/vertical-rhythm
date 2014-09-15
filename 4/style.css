@@ -9,41 +9,41 @@ html {
   line-height: 1.5em;
 }
 
-/* line 8, style.scss */
+/* line 11, style.scss */
 body {
   background-image: url(data:image/gif;base64,R0lGODlhBQASAIAAAN3d3f///yH5BAAAAAAALAAAAAAFABIAAAIKjI+py+0PF5izAAA7);
 }
 
-/* line 12, style.scss */
+/* line 16, style.scss */
 body, div, h1, h2, h3, h4, h5, p, pre {
   margin: 0;
   padding: 0;
 }
 
-/* line 17, style.scss */
+/* line 21, style.scss */
 body {
   margin: 1.5em;
 }
 
-/* line 21, style.scss */
+/* line 25, style.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 25, style.scss */
+/* line 30, style.scss */
 h1 {
   font-size: 2em;
   line-height: 1.5em;
 }
 
-/* line 29, style.scss */
+/* line 34, style.scss */
 h2 {
   font-size: 1.5em;
   line-height: 2em;
 }
 
-/* line 33, style.scss */
+/* line 38, style.scss */
 h3 {
-  font-size: 1.16667em;
-  line-height: 1.28571em;
+  font-size: 1.08333em;
+  line-height: 1.38462em;
 }

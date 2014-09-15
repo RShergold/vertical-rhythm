@@ -1,14 +1,111 @@
 <html>
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <h1>Vertical Rhythm</h1>
   <h2>4 - Setting font sizes</h2>
 
+  <h3>Font Size</h3>
+  <p>
+    We are going to set the font size ( new-font-size ) of our H1 tags to 24px.
+    <br>
+    All of our font sizes are set in em's - relative to our base font size of 12px - we do a simple calculation.
+  </p>
+  <p>
+    new-font-size ÷ base-font-size = h1-font-size
+    <br>
+    24 ÷ 12 = 2
+    <br>
+  </p>
+  <p>
+    so we set our font-size to 2em.
+  </p>
+  <pre>
+    h1 {
+      font-size: 2em
+    }
+  </pre>
 
 
+  <h3>Line Height</h3>
+  <p>
+    Next up we set our line height. We want this to fit our guide lines so needs to be a multiple of our base-line-height.
+    <br>
+    first we calculate how many lines our new font size will need.
+  </p>
+  <p>
+    ceil( new-font-size ÷ base-line-height ) = lines-needed
+    <br>
+    ceil( 24 ÷ 18 ) = 2
+  </p>
+  <p>
+    we now know we need 2 lines to fit a font of 24px
+  </p>
+  <p>
+    Next we calculate the actual line-height of our H1 tag.
+    <br>
+    This is in em's in relation to the new font-size (24px) and wants to equal 2 lines.
+  <p>
+  <p>
+    ( base-line-height × lines-needed ) ÷ new-font-size = h1-line-height
+    <br>
+    ( 18 × 2 ) ÷ 24 = 1.5
+  </p>
+  <p>
+    so we now set out H1 line-height to 1.5em
+  <p>
+  <pre>
+    h1 {
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+  </pre>
 
-  <a href="../3/index.html">Next: 4 - Setting font sizes </a>
+
+  <h3>Now do that in Compass</h3>
+  <p>
+    Luckily in compasss we have a simple mixin to call that will do all that for us.
+    <br>
+    Simply include adjust-font-size-to and set the size in pixels.
+  </p>
+
+  <a href="style.scss"><small>style.scss</small></a>
+  <pre>
+    h1 {
+      @include adjust-font-size-to(24px);
+    }
+
+    h2 {
+      @include adjust-font-size-to(18px);
+    }
+
+    h3 {
+      @include adjust-font-size-to(13px);
+    }
+  </pre>
+  <p>
+    compiles to:
+  </p>
+  <a href="style.css"><small>style.css</small></a>
+  <pre>
+    h1 {
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+
+    h3 {
+      font-size: 1.08333em;
+      line-height: 1.38462em;
+    }
+  </pre>
+
+  <a href="../5/index.html">Next: 5 - adding some layouts </a>
 </body>
 </html>

@@ -25,3 +25,30 @@ body {
 p {
   margin-bottom: rhythm(1);
 }
+
+// --- 4
+h1 {
+  @include adjust-font-size-to(24px);
+}
+
+h2 {
+  @include adjust-font-size-to(18px);
+}
+
+h3 {
+  @include adjust-font-size-to(13px);
+}
+
+// --- 5
+body {
+  margin: rhythm(1) auto;
+  max-width: 800px;
+}
+
+.g-frame {
+  overflow: hidden;
+}
+.g-half {
+  float: left;
+  width: 50%;
+}

@@ -29,3 +29,38 @@ body {
 p {
   margin-bottom: 1.5em;
 }
+
+/* line 30, style.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* line 34, style.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+/* line 38, style.scss */
+h3 {
+  font-size: 1.08333em;
+  line-height: 1.38462em;
+}
+
+/* line 43, style.scss */
+body {
+  margin: 1.5em auto;
+  max-width: 800px;
+}
+
+/* line 48, style.scss */
+.g-frame {
+  overflow: hidden;
+}
+
+/* line 51, style.scss */
+.g-half {
+  float: left;
+  width: 50%;
+}
