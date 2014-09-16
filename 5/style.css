@@ -52,18 +52,17 @@ h3 {
 body {
   margin: 1.5em auto;
   max-width: 800px;
-  padding-right: 1.5em;
 }
 
-/* line 49, style.scss */
+/* line 48, style.scss */
 .g-frame {
   overflow: hidden;
 }
 
-/* line 52, style.scss */
+/* line 51, style.scss */
 .g-half {
   float: left;
   width: 50%;
   box-sizing: border-box;
-  padding: 0 1.5em;
+  padding-right: 1.5em;
 }
