@@ -1,4 +1,6 @@
 vertical-rhythm
 ===============
 
-explination of our use of vertical rhythm in html layouts
+explanation of our use of vertical rhythm in html layouts.
+
+[rshergold.github.io/vertical-rhythm](http://rshergold.github.io/vertical-rhythm/)
