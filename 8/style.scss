@@ -58,10 +58,17 @@ body {
 // --- 7
 .left {
   color: blue;
-  border-bottom: 4px solid;
+  @include adjust-font-size-to(18px);
+  @include trailing-border(4px)
 }
 
 .right {
   color: green;
-  @include trailing-border(4px)
+  @include adjust-font-size-to(18px);
+  @include trailing-border(4px,1,18px)
+}
+
+.three-lined-border {
+  color: red;
+  @include trailing-border(4px, 3)
 }

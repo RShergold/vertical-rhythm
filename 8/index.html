@@ -1,0 +1,96 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Vertical Rhythm</h1>
+  <h2>Next: 8 - borders continued</h2>
+
+  <p>
+    Don't forget that as ever the borders are calculated in ems. this means if the font size changes
+    <br>
+    you need to recalculate the elements bottom padding and border width in relation to the new font size
+  <p>
+  <p>
+    Consider the two examples below
+  </p>
+
+  <div class="g-frame">
+    <div class="g-half">
+      <a href="style.scss"><small>style.scss</small></a>
+      <pre>
+        .left {
+          color: blue;
+          @include adjust-font-size-to(18px);
+          @include trailing-border(4px)
+        }
+      </pre>
+      <p>Compiles to</p>
+      <a href="style.scss"><small>style.css</small></a>
+      <pre>
+        .left {
+          color: blue;
+          font-size: 1.5em;
+          line-height: 2em;
+          border-bottom-style: solid;
+          border-bottom-width: 0.33333em;
+          padding-bottom: 1.16667em;
+        }
+      </pre>
+      <div class="left">Test line for .left class</div>
+    </div>
+
+    <div class="g-half">
+      <a href="style.scss"><small>style.scss</small></a>
+      <pre>
+        .right {
+          color: green;
+          @include adjust-font-size-to(18px);
+          @include trailing-border(4px,1,18px)
+        }
+      </pre>
+      <p>Compiles to</p>
+      <a href="style.scss"><small>style.css</small></a>
+      <pre>
+        .right {
+          color: green;
+          font-size: 1.5em;
+          line-height: 2em;
+          border-bottom-style: solid;
+          border-bottom-width: 0.22222em;
+          padding-bottom: 0.77778em;
+        }
+      </pre>
+      <div class="right">Test line for .right class</div>
+      <br><br>
+    </div>
+  </div>
+
+  <p>
+    On the left side the border and padding is incorrectly calculated based on the base font-size. This results
+    <br>
+    in too much padding and too thick a border.
+    <br>
+    on the right side we have told trailing-border() our font-size, resulting in the right sizes.
+  </p>
+
+  <h3>trailing-border variables</h3>
+  <p>
+    trailing-border($width, $lines, $font-size, $border-style)
+  </p>
+  <p>
+    by changing the $lines variable we can set how many lines the bottom padding takes up
+  </p>
+  <pre>
+    .three-lined-border {
+      color: red;
+      @include trailing-border(4px, 3)
+    }
+  </pre>
+  <div class="three-lined-border">Test line for .three-lined-border class</div>
+  <br><br><br>
+
+  <a href="../8/index.html">Next: 8 - borders continued </a>
+</body>
+</html>

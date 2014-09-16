@@ -7,7 +7,53 @@
   <h1>Vertical Rhythm</h1>
   <h2>7 - borders</h2>
 
+  <p>
+    When you add a border to an element it will of corse affect it's height
+  </p>
 
-  <a href="../5/index.html">Next: 5 - adding some layouts </a>
+    <div class="g-frame">
+      <div class="g-half">
+        <a href="style.scss"><small>style.scss</small></a>
+        <pre>
+          .left {
+            color: blue;
+            border-bottom: 4px solid;
+          }
+        </pre>
+        <div class="left">Test line for .left class</div>
+        <p>
+          As you can see the border is added to the bottom of our DIV element, but this adds 4px to the elements height and throws
+          off the rhythm for all of the following elements.
+        </p>
+        <p>
+          We can use the mixin <b>trailing-border()</b>. This will add padding of one row (minus the border height) to the bottom of our element and place
+          the new border at the bottom of that row.
+        </p>
+      </div>
+      <div class="g-half">
+        <a href="style.scss"><small>style.scss</small></a>
+        <pre>
+          .right {
+            color: green;
+            @include trailing-border(4px)
+          }
+        </pre>
+        <p>Compiles to</p>
+        <a href="style.scss"><small>style.css</small></a>
+        <pre>
+          .right {
+            color: green;
+            border-bottom-style: solid;
+            border-bottom-width: 0.33333em;
+            padding-bottom: 1.16667em;
+          }
+        </pre>
+        <div class="right">Test line for .right class</div>
+        <p>
+          we can now continue below our border in rhythm
+        </p>
+      </div>
+    </div>
+  <a href="../8/index.html">Next: 8 - borders continued</a>
 </body>
 </html>

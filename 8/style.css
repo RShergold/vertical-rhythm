@@ -70,13 +70,27 @@ body {
 /* line 59, style.scss */
 .left {
   color: blue;
-  border-bottom: 4px solid;
-}
-
-/* line 64, style.scss */
-.right {
-  color: green;
+  font-size: 1.5em;
+  line-height: 2em;
   border-bottom-style: solid;
   border-bottom-width: 0.33333em;
   padding-bottom: 1.16667em;
+}
+
+/* line 65, style.scss */
+.right {
+  color: green;
+  font-size: 1.5em;
+  line-height: 2em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.22222em;
+  padding-bottom: 0.77778em;
+}
+
+/* line 71, style.scss */
+.three-lined-border {
+  color: red;
+  border-bottom-style: solid;
+  border-bottom-width: 0.33333em;
+  padding-bottom: 4.16667em;
 }
