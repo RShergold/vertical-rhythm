@@ -8,17 +8,36 @@
   <h2>5 - Adding some layouts</h2>
 
   <p>
-    I'm just going to size and center the page then create two columns so we can compare things on the following pages
+    I'm just going to change the layout slightly so we can compare things a bit better
   </p>
   <div class="g-frame">
     <div class="g-half">
-      left
+      <p>First, centre and size the body</p>
+      <pre>
+        body {
+          margin: rhythm(1) auto;
+          max-width: 800px;
+          padding-right: rhythm(1);
+        }
+      </pre>
     </div>
     <div class="g-half">
-      right
+      <p>Then create two columns</p>
+      <pre>
+        .g-frame {
+          overflow: hidden;
+        }
+
+        .g-half {
+          float: left;
+          width: 50%;
+          box-sizing: border-box;
+          padding: 0 rhythm(1);
+        }
+      </pre>
     </div>
   </div>
 
-  <a href="../5/index.html">Next: 5 - adding some layouts </a>
+  <a href="../6/index.html">Next: 6 - mix font size and margins </a>
 </body>
 </html>

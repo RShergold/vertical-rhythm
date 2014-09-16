@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Vertical Rhythm</h1>
+  <h2>6 - Mix font size and margins</h2>
+
+  <p>
+    So we know how to add margins to things with <b>rhythm(1)</b>,
+    and how to change font sizes with <b>adjust-font-size-to()</b>.
+    <br>
+    What happens when you combine the two?
+  </p>
+
+  <div class="g-frame">
+    <div class="g-half">
+      <p class="left">Test line for .left class</p>
+      <pre>
+        .left {
+          color: blue;
+          @include adjust-font-size-to(18px);
+          margin-bottom: rhythm(1)
+        }
+      </pre>
+      <p>
+        This side breaks the rhythm. If we inspect our left test line, you can see that the bottom margin covers more than one line.
+      </p>
+      <p>
+        This is because <b>rhythm(1)</b> outputs an em calculated against the base font size.
+        <br>
+        Because we changed the font-size the em's are now calculated against the new font-size rather than the base.
+    </div>
+    <div class="g-half">
+      <p class="right">Test line for .right class</p>
+      <pre>
+        .right {
+          color: green;
+          @include adjust-font-size-to(18px);
+          margin-bottom: rhythm(1, 18px)
+        }
+      </pre>
+      <p>
+        we can fix this by calculating our rhythm against the new font-size by simply supplying <b>rhythm()</b> with a second argument equal to the new font size.
+      </p>
+      <br><br><br><br><br>
+    </div>
+  </div>
+
+  <p>
+    This causes issues if you are using a class to change the font size of an element and a different class to add padding. When those classes are applied to the same element, this approach will always break the rhythm.
+  </p>
+
+  <a href="../5/index.html">Next: 5 - adding some layouts </a>
+</body>
+</html>
