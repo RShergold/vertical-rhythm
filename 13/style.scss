@@ -1,0 +1,87 @@
+
+// --- 1
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 12px;
+$base-line-height: 18px;
+
+@include establish-baseline;
+
+// --- 2
+body{
+  background-image: url(data:image/gif;base64,R0lGODlhBQASAIAAAN3d3f///yH5BAAAAAAALAAAAAAFABIAAAIKjI+py+0PF5izAAA7);
+}
+
+// --- 3
+body,div,h1,h2,h3,h4,h5,p,pre {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: rhythm(1);
+}
+
+p {
+  margin-bottom: rhythm(1);
+}
+
+// --- 4
+h1 {
+  @include adjust-font-size-to(24px);
+}
+
+h2 {
+  @include adjust-font-size-to(18px);
+}
+
+h3 {
+  @include adjust-font-size-to(13px);
+}
+
+// --- 5
+body {
+  margin: rhythm(1) auto;
+  max-width: 800px;
+}
+
+.g-frame {
+  overflow: hidden;
+}
+.g-half {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: rhythm(1);
+}
+
+// --- 10
+.t-center {
+  text-align: center;
+}
+.rhythmTop-5 {
+  @include margin-leader(5);
+}
+.rhythmBottom-5 {
+  @include margin-trailer(5);
+}
+h4 {
+  @include adjust-font-size-to(48px);
+}
+ul {
+  margin-top: 0;
+  margin-bottom: rhythm(1);
+}
+
+// --- 13
+.div1, .div2 {
+  height: 18px;
+}
+.div1 {
+  background-color: blue;
+  margin-bottom: 18px;
+}
+.div2 {
+  background-color: green;
+  margin-bottom: 36px;
+}

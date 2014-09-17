@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <h1>Layout Rules</h1>
+  <h2>4 - Second rule</h2>
+
+  <p>So we know we want to keep our margins from touching. Lets start with the first rule<p>
+
+  <h3>block elements to only have a bottom margin - never top</h3>
+  <p>By making sure we never use top margin on our layout elements we ensure we know with certainty where the spacing is coming from<p>
+  <pre>
+    .div1, .div2 {
+      height: 18px;
+    }
+    .div1 {
+      background-color: blue;
+      margin-bottom: 18px;
+    }
+    .div2 {
+      background-color: green;
+      margin-bottom: 36px;
+    }
+  </pre>
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div2"></div>
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div1"></div>
+  <div class="div1"></div>
+
+  <a href="../14/index.html">Next: 4 - Second rule</a>
+</body>
+</html>

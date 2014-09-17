@@ -1,0 +1,112 @@
+/* line 61, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 75%;
+}
+
+/* line 64, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+/* line 11, style.scss */
+body {
+  background-image: url(data:image/gif;base64,R0lGODlhBQASAIAAAN3d3f///yH5BAAAAAAALAAAAAAFABIAAAIKjI+py+0PF5izAAA7);
+}
+
+/* line 16, style.scss */
+body, div, h1, h2, h3, h4, h5, p, pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, style.scss */
+body {
+  margin: 1.5em;
+}
+
+/* line 25, style.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 30, style.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* line 34, style.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+/* line 38, style.scss */
+h3 {
+  font-size: 1.08333em;
+  line-height: 1.38462em;
+}
+
+/* line 43, style.scss */
+body {
+  margin: 1.5em auto;
+  max-width: 800px;
+}
+
+/* line 48, style.scss */
+.g-frame {
+  overflow: hidden;
+}
+
+/* line 51, style.scss */
+.g-half {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 1.5em;
+}
+
+/* line 59, style.scss */
+.t-center {
+  text-align: center;
+}
+
+/* line 62, style.scss */
+.rhythmTop-5 {
+  margin-top: 7.5em;
+}
+
+/* line 65, style.scss */
+.rhythmBottom-5 {
+  margin-bottom: 7.5em;
+}
+
+/* line 68, style.scss */
+h4 {
+  font-size: 4em;
+  line-height: 1.125em;
+}
+
+/* line 71, style.scss */
+ul {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+/* line 77, style.scss */
+.div1, .div2 {
+  height: 18px;
+}
+
+/* line 80, style.scss */
+.div1 {
+  background-color: blue;
+  margin-bottom: 18px;
+}
+
+/* line 84, style.scss */
+.div2 {
+  background-color: green;
+  margin-bottom: 36px;
+}
