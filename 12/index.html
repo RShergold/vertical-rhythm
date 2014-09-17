@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <h1>Layout Rules</h1>
+  <h2>2 - collapsing margins continued</h2>
+
+  <p>
+    now consider nesting margins. We use the same css but nest the divs this time
+  </p>
+  <pre>
+    .div1, .div2 {
+      height: 18px;
+    }
+    .div1 {
+      background-color: blue;
+      margin: 18px;
+    }
+    .div2 {
+      background-color: green;
+      margin: 36px;
+    }
+
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+    &lt;div class="div1"&gt;
+      &lt;div class="div2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+  </pre>
+
+  <div>div ------------------------ no padding or margin</div>
+  <div class="div1">
+    <div class="div2"></div>
+  </div>
+  <div>div ------------------------ no padding or margin</div>
+
+  <p>
+    <br>
+    So what happened here??<br>
+    The first thing to note is that only top and bottom margins are collapsed, so the side margins act as expected.<br>
+    The top margins are touching so the smaller margin ( div1 ) is collapsed and we are only using the larger margin ( div2 )<br>
+    The bottom margin is small because we are fixing the height of div1. If we remove that height, we can see the bottom margin<br>
+    also takes on the height of div2.
+  </p>
+  <pre>
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+    &lt;div class="div1" style="height:initial"&gt;
+      &lt;div class="div2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+  </pre>
+  <div>div ------------------------ no padding or margin</div>
+  <div class="div1" style="height:initial">
+    <div class="div2"></div>
+  </div>
+  <div>div ------------------------ no padding or margin</div>
+
+  <p>
+    <br>
+    however, this still does not give us what we may of been expecting.
+  </p>
+  <p>
+    One of the standard hacks to fix this is to ensure the margins never meet eachother. This can be done by adding a small amount of padding to the element.
+  </p>
+
+  <pre>
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+    &lt;div class="div1" style="height:initial;padding:1px"&gt;
+      &lt;div class="div2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+  </pre>
+  <div>div ------------------------ no padding or margin</div>
+  <div class="div1" style="height:initial;padding:1px">
+    <div class="div2"></div>
+  </div>
+  <div>div ------------------------ no padding or margin</div>
+
+  <p>
+    <br>
+    the problem here is we have now thrown our elements out of rhythm.<br>
+    However we have picked up an important concept. Ensuring vertical margins never meet means we can be sure we never encounter collapsing margins.
+  </p>
+  <p>
+    So we stick to two simple rules to help us out.
+  </p>
+  <a href="../13/index.html">Next: 3 - first rule</a>
+</body>
+</html>
