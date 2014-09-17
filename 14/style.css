@@ -110,3 +110,10 @@ ul {
   background-color: green;
   margin-bottom: 36px;
 }
+
+/* line 88, style.scss */
+.div3 {
+  padding-top: 18px;
+  background-color: rgba(0, 128, 128, 0.2);
+  margin-bottom: 36px;
+}

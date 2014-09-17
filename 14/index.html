@@ -6,12 +6,10 @@
 <body>
 
   <h1>Layout Rules</h1>
-  <h2>3 - first rule</h2>
+  <h2>4 - second rule</h2>
 
-  <p>So we know we want to keep our margins from touching. Lets start with the first rule<p>
+  <p>when we nest elements the only top spacing should be in the form of padding in the container</p>
 
-  <h3>block elements to only have a bottom margin - never top</h3>
-  <p>By making sure we never use top margin on our layout elements we ensure we know with certainty where the spacing is coming from<p>
   <pre>
     .div1, .div2 {
       height: 18px;
@@ -24,15 +22,58 @@
       background-color: green;
       margin-bottom: 36px;
     }
+    .div3 {
+      padding-top: 18px;
+      background-color: rgba(1, 1, 1, 0.2);
+      margin-bottom: 36px;
+    }
   </pre>
-  <div class="div1"></div>
-  <div class="div2"></div>
-  <div class="div2"></div>
-  <div class="div1"></div>
-  <div class="div2"></div>
-  <div class="div1"></div>
-  <div class="div1"></div>
 
-  <a href="../12/index.html">Next: 4 - Second rule</a>
+  <div class="g-frame">
+    <div class="g-half">
+
+
+      <div class="div3">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div2"></div>
+        <div class="div1"></div>
+      </div>
+
+
+    </div>
+    <div class="g-half">
+
+      div3 space<br>
+      div1<br>
+      - div1 space<br>
+      div2<br>
+      - div2 space<br>
+      - div2 space<br>
+      div2<br>
+      - div2 space<br>
+      - div2 space<br>
+      div1<br>
+      div3 space<br>
+      div3 space<br>
+
+    </div>
+  </div>
+
+  <p>
+    <br><br>
+    Now we can see that we (correctly) have a space at the top of our frame (div3) and that each inner div has its correct under spacing
+  </p>
+  <p>
+    However there is a major problem at the bottom of the container.<br>
+    the bottom margin of of the container (div3) meets the bottom margin of the last row (div1). <br>
+    because of this the smaller margin (div1) is collapsed.
+  <p>
+  <p>
+    with our layout rules this will be the only place where our margins can collapse.<br>
+    Before we fix that - with our final rule - we need to consider when and why this happens
+  </p>
+
+  <a href="../15/index.html">Next: 5 - When to use the third rule</a>
 </body>
 </html>
