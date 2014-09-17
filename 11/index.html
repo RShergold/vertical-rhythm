@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <h1>Layout Rules</h1>
+  <h2>1 - collapsing margins</h2>
+
+  <p>
+    I'm just going to cover the very basic concept of collapsing margins here
+  </p>
+  <p>
+    For a more comprehensive explanation, checkout
+    <a href="http://www.howtocreate.co.uk/tutorials/css/margincollapsing">this article from howtocreate.co.uk</a>
+    and the <a href="http://www.w3.org/TR/CSS21/box.html#collapsing-margins">w3 specifications</a>
+  </p>
+
+  <p>
+    When two block level elements of the same block formatting context adjoin vertically (ie are above one another)
+    and they both have a margin that meet, the smallest margin is collapsed (set to 0) so the space between them is equal to the
+    largest of the two margins.
+  </p>
+
+  <h3>collapsing margins in action</h3>
+  <p>
+    Lets create two div elements. both will have a height of 18px (the height of our guide lines).<br>
+    the first will have a margin of 18px (1 guide line).<br>
+    the second will have a margin of 36px (2 guide lines).
+  </p>
+  <pre>
+    .div1, .div2 {
+      height: 18px;
+    }
+    .div1 {
+      background-color: blue;
+      margin: 18px;
+    }
+    .div2 {
+      background-color: green;
+      margin: 36px;
+    }
+
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+    &lt;div class="div1"&gt;&lt;/div&gt;
+    &lt;div class="div2"&gt;&lt;/div&gt;
+    &lt;div&gt;div ------------------------ no padding or margin&lt;/div&gt;
+
+  </pre>
+
+  <div>div ------------------------ no padding or margin</div>
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div>div ------------------------ no padding or margin</div>
+
+  <p>
+    <br><br>
+    here we can see that the blue div has a margin of 18px (1 guide line) above it but below there are
+    2 guide lines (26px). That's the margin from the bottom div. <br> As 26 > 18 we are only using the bottom div's
+    margin. The margin from the top div has been 'collapsed' ie removed.
+  <p>
+
+
+  <a href="../12/index.html">Next: 2 - collapsing margins continued</a>
+</body>
+</html>
