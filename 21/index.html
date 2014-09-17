@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  <h1>Putting it all together</h1>
+  <h2>3 - add a reset</h2>
+
+  <small><a href="style.scss">SCSS</a> compiles to <a href="style.css">CSS</a> </small>
+  <pre>
+
+    //u-reset
+    .u-reset {
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+    }
+  </pre>
+
+  <p>
+    now we can add some nested elements
+  </p>
+
+  <pre>
+
+    &lt;div class="u-reset u-rhythmTop-2 u-rhythmBottom-1" style="background-color:rgba(255,0,0,0.1)"&gt;
+      &lt;div class="u-rhythmBottom-1" style="background-color:rgba(0,255,0,0.2)"&gt;
+        u-rhythmBottom-1
+      &lt;/div&gt;
+      &lt;div class="u-rhythmBottom-2" style="background-color:rgba(0,255,0,0.2)"&gt;
+        u-rhythmBottom-2
+      &lt;/div&gt;
+    &lt;/div&gt;
+  </pre>
+  <div class="u-reset u-rhythmTop-2 u-rhythmBottom-1" style="background-color:rgba(255,0,0,0.1)">
+    <div class="u-rhythmBottom-1" style="background-color:rgba(0,255,0,0.2)">
+      u-rhythmBottom-1
+    </div>
+    <div class="u-rhythmBottom-2" style="background-color:rgba(0,255,0,0.2)">
+      u-rhythmBottom-2
+    </div>
+  </div>
+
+  <a href="../22/index.html">next: 4 - add some font sizing classes </a>
+</body>
+</html>
