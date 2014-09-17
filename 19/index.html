@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  <h1>Putting it all together</h1>
+  <h2>1 - Start the css from scratch</h2>
+
+  <p>
+    throughout this guide we have been slowly building our css file over each page.
+    <br>
+    we are now going to clear it out and start with some basics (mostly the same as before)
+  </p>
+  <br>
+
+  <small><a href="style.scss">SCSS</a> compiles to <a href="style.css">CSS</a> </small>
+  <pre>
+
+    // set up some variables
+    $font-size-largest: 24px;
+    $font-size-large: 18px;
+    $font-size-normal: 12px;
+    $font-size-small: 10px;
+
+
+    // include vertical rhythm
+    @import "compass/typography/vertical_rhythm";
+
+    $base-font-size: $font-size-normal;
+    $base-line-height: $font-size-normal * 1.5;
+
+    @include establish-baseline;
+
+    // basic reset
+    body,div,h1,h2,h3,h4,h5,p,pre,ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    // style the body
+    body{
+      $grid-background-baseline-color: rgba(0, 0, 0, 0.1);
+      @include debug-vertical-alignment();
+      margin: rhythm(1) auto;
+      max-width: 800px;
+    }
+
+    // adjust font sizes for tags
+    h1 {
+      @include adjust-font-size-to($font-size-largest);
+    }
+
+    h2 {
+      @include adjust-font-size-to($font-size-large);
+    }
+
+    small {
+      @include adjust-font-size-to($font-size-small);
+    }
+
+  </pre>
+
+  <p>
+    There are only really two differences here from our old style sheet.<br>
+    first we are defining 4 different font sizes as variables.<br>
+    we are also generating the guidelines with a built in compass mixin.
+  </p>
+  <br>
+
+  <a href="../20/index.html">next: 2 - add some spacing classes </a>
+</body>
+</html>

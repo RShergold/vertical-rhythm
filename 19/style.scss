@@ -1,0 +1,41 @@
+// set up some variables
+$font-size-largest: 24px;
+$font-size-large: 18px;
+$font-size-normal: 12px;
+$font-size-small: 10px;
+
+
+// include vertical rhythm
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: $font-size-normal;
+$base-line-height: $font-size-normal * 1.5;
+
+@include establish-baseline;
+
+// basic reset
+body,div,h1,h2,h3,h4,h5,p,pre,ul {
+  margin: 0;
+  padding: 0;
+}
+
+// style the body
+body{
+  $grid-background-baseline-color: rgba(0, 0, 0, 0.1);
+  @include debug-vertical-alignment();
+  margin: rhythm(1) auto;
+  max-width: 800px;
+}
+
+// adjust font sizes for tags
+h1 {
+  @include adjust-font-size-to($font-size-largest);
+}
+
+h2 {
+  @include adjust-font-size-to($font-size-large);
+}
+
+small {
+  @include adjust-font-size-to($font-size-small);
+}
