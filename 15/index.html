@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <h1>Layout Rules</h1>
+  <h2>5 - When to use the third rule</h2>
+
+  <p>If we cast our minds back to the original explination of collapsing margins..</p>
+  <p>"When two block level elements <b>of the same block formatting context</b> adjoin vertically"</p>
+  <p>
+    an explanation of block formatting contexts <a href="http://www.w3.org/TR/CSS21/visuren.html#block-formatting">
+    can be found here</a>.
+  </p>
+  <p>
+    so the reason our margins collapse in the previous example is because the frame (div3) and the last child element (div1)
+    both have the same block formatting context.
+    <br>
+    The key to understanding the third rule is to realise that this will not always be the case
+  </p>
+
+  <h3>Grids</h3>
+  <p>A large part of the layout of a webpage will be defined by a grid system.</p>
+  <p>
+    Whether you are using a ready made grid system <a href="http://getbootstrap.com/css/#grid">Like bootstrap</a>
+    or are creating your own, they generally rely on floating DIV elements to create the columns.<br>
+    If you then place standard block elements inside that floated DIV they will be a different block formatting context
+  </p>
+  <p>
+    lets try that out by adding float to div3 from the previous example
+  </p>
+  <pre>
+    .div3 {
+      float:left;
+      width: 100%;
+    }
+  </pre>
+  <div class="div3">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div2"></div>
+    <div class="div1"></div>
+  </div>
+
+  <p>
+    et voilà
+    <br>
+    we can now see the bottom margin from the last child element and the bottom margin from our container (div3)
+  </p>
+  <p>
+    So for these circumstances (the first level inside the grid) we don't have to do anything and our margins will render as expected
+    <br>
+    What about the next level down?
+  </p>
+  <a href="../16/index.html">Next: 6 - the third rule</a>
+</body>
+</html>
