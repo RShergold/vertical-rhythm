@@ -1,0 +1,94 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <h1>Layout Rules</h1>
+  <h2>6 - the third rule</h2>
+
+  <p>We now know that, where the bottom margins meet and the margin collapses, the solution is to change the block formatting context</p>
+
+  <p>we can do this with a standard css trick, <b>clearfix</b><p>
+
+  <p>Lets create a nested div structure (note: our P elements already have a bottom-margin of 18px )</p>
+
+  <pre>
+    .frame {
+      padding-top: 18px;
+      background-color: rgba(0,128,128, 0.2);
+      margin-bottom: 36px;
+    }
+
+    &lt;div class="frame"&gt;
+      &lt;p&gt;content here&lt;/p&gt;
+      &lt;div class="frame"&gt;
+        &lt;p&gt;content here&lt;/p&gt;
+        &lt;div class="frame"&gt;
+          &lt;p&gt;content here&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  </pre>
+  <div class="frame">
+    <p>content here</p>
+    <div class="frame">
+      <p>content here</p>
+      <div class="frame">
+        <p>content here</p>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    So here all of our bottom margins are collapsing. Lets add a really basic clearfix to each div.
+  </p>
+
+  <pre>
+    .clearfix {
+      overflow: hidden;
+      zoom: 1; //IE hasLayout fix
+    }
+  </pre>
+  <div class="frame clearfix">
+    <p>content here</p>
+    <div class="frame clearfix">
+      <p>content here</p>
+      <div class="frame clearfix">
+        <p>content here</p>
+      </div>
+    </div>
+  </div>
+
+  <p>here is an example with the bootstrap clearfix</p>
+  <pre>
+    .clearfix2 {
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+    }
+  </pre>
+  <div class="frame clearfix2">
+    <p>content here</p>
+    <div class="frame clearfix2">
+      <p>content here</p>
+      <div class="frame clearfix2">
+        <p>content here</p>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    so to summarise the third rule is to use clearfix on your frame/parent element... unless you dont have to
+  </p>
+
+  <a href="../17/index.html">Next: 7 - end of part II</a>
+</body>
+</html>
