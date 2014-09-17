@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  <h1>Putting it all together</h1>
+  <h2>2 - add some spacing classes</h2>
+
+
+  <p>
+    Next up we are going to add some classes for adding vertical spaces to elements.
+  </p>
+  <br>
+  <p>
+    The u- prefex stands for Utility. This explains the class' category and where to find it in our normal css file structure
+    <br>
+    (for readability; we have added everything to one file here)
+  </p>
+  <br>
+
+  <small><a href="style.scss">SCSS</a> compiles to <a href="style.css">CSS</a> </small>
+  <pre>
+    //u-rhythm
+    .u-rhythmTop {
+      padding-top: rhythm(0.5);
+    }
+    .u-rhythmTop-1 {
+      padding-top: rhythm(1);
+    }
+    .u-rhythmTop-2 {
+      padding-top: rhythm(2);
+    }
+    .u-rhythmTop-3 {
+      padding-top: rhythm(3);
+    }
+
+    .u-rhythmBottom {
+      @include trailer(0.5);
+    }
+    .u-rhythmBottom-1 {
+      @include trailer(1);
+    }
+    .u-rhythmBottom-2 {
+      @include trailer(2);
+    }
+    .u-rhythmBottom-3 {
+      @include trailer(3);
+    }
+  </pre>
+
+  <p>
+    We can now space elements by simply adding <b>u-rhythm*</b> classes
+  </p>
+  <br>
+
+  <div class="u-rhythmBottom-1" style="background-color:rgba(255,0,0,0.1)">
+    u-rhythmBottom-1
+  </div>
+  <div class="u-rhythmBottom" style="background-color:rgba(0,255,0,0.2)">
+    u-rhythmBottom -- we can also space things in fractions of a rhythm
+  </div>
+  <div class="u-rhythmBottom" style="background-color:rgba(0,255,0,0.2)">
+    u-rhythmBottom
+  </div>
+  <div class="u-rhythmBottom-1" style="background-color:rgba(255,0,0,0.1)">
+    u-rhythmBottom-1
+  </div>
+  <a href="../21/index.html">next: 3 - add a reset </a>
+</body>
+</html>
