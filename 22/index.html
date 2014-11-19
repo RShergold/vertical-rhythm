@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  <h1>Putting it all together</h1>
+  <h2>4 - add some font sizing classes</h2>
+
+  <small><a href="style.scss">SCSS</a> compiles to <a href="style.css">CSS</a> </small>
+  <pre>
+
+    .t-sizeLargest {
+      @include adjust-font-size-to($font-size-largest);
+    }
+    .t-sizeLarge {
+      @include adjust-font-size-to($font-size-large);
+    }
+    .t-sizeSmall {
+      @include adjust-font-size-to($font-size-small);
+    }
+  </pre>
+
+  <p class="t-sizeLargest">
+    t-sizeLargest
+  </p>
+  <p class="t-sizeLarge">
+    t-sizeLarge
+  </p>
+  <p>
+    standard size
+  </p>
+  <p class="t-sizeSmall">
+    t-sizeSmall
+  </p>
+
+
+  <a href="../20/index.html">next: 3 - add a reset </a>
+</body>
+</html>
